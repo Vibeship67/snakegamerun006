@@ -18,4 +18,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run with Xvfb for headless display
-CMD ["xvfb-run", "-a", "-screen", "0", "1024x768x24", "python", "main.py"]
+CMD ["xvfb-run", "--server-args=-screen 0 1024x768x24", "python", "main.py"]
